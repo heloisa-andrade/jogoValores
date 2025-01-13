@@ -1,0 +1,61 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color:#11C76F;
+}
+header{
+    display: flex;
+    background-color: rgb(253, 253, 249);
+    height: 40px;
+    align-items: center ;
+    justify-content: end;
+    /* border-radius: 15%; */
+    p{
+        margin: 3%;
+
+    }
+}
+#frase{  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7%;
+    font-size: 25px;
+}
+.botoes{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+.jogo{
+    display: flex;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color:aliceblue;
+    margin: 1.5%;
+
+}
+.regra{
+    display: flex ;
+    margin: 1.5%;
+    width: 200px;
+    height: 50px;
+    background-color:aliceblue;
+    align-items: center;
+    justify-content: center;
+}
+.mensagem{
+    margin-top: 5%;
+    margin-left: 25%;
+    height: 50%;
+    width: 50%;
+    background-color: aliceblue;
+    border-radius: 5%;
+}

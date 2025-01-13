@@ -1,0 +1,62 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color:#11C76F;
+}
+header{
+    display: flex;
+    background-color: rgb(253, 253, 249);
+    height: 40px;
+    align-items: center ;
+    justify-content: end;
+    /* border-radius: 15%; */
+    p{
+        margin: 3%;
+
+    }
+}
+.mensagem{
+    
+    width: 40%;
+    height: 450px;
+    background-color:aliceblue;
+    margin-left: 30%;
+    margin-top: 5%;
+    border-radius: 5%;
+   
+}
+.pontuação{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+
+}
+.ponto{
+    display: flex;
+}
+#resposta{
+    display: flex;
+    justify-content: center;
+    /* margin-top: -200px; */
+    margin-left: 15%;
+
+}
+.instagram{
+    height: 48px;
+}
+.face{
+    height: 48px;
+    margin-left: 1%;
+}
+.compartilhar{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}

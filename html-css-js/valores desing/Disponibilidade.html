@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Desing.css">
+</head>
+<body>
+    <header> 
+        <div id="cro">
+            <input type="text" class="cronometro" value="00:00"  readonly>
+        </div>
+        <h2>Quais caracteristicas ajudam o valor Disponibilidade ?</h2>
+        <dive class="livro">
+            <button id="descricao"><img class="aaaimg" src="/imagens//livro-fechado.png" alt=""></button>
+        </dive>
+       
+    </header>
+    <dialog class="dia" >
+        <div class="titulo">
+            <h1>Disponibilidade</h1>
+            <button>&times;</button>
+        </div>
+        <div class="textodia">
+            <div class="descricao"> <p>É receptivo, acessível, disponível, não tem dia e não tem hora, está sempre pronto e tem o trabalho como prioridade. Está aberto ao novo, às mudanças e motivado para novos desafios.</p></div>
+           <div class="trite">
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                </div>
+           </div>
+            
+        </div>
+    </dialog>
+        <BR></BR>
+    <div id = "tudo">
+            <div class="texto"  id="n1" onclick="selecionado(n1)">
+                <h2 class="valor">Disponibilidade</h2>
+                <p class="descrição"> Não gostar do que faz</p>
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+
+            <div class="texto certo"  id="n2" onclick="selecionado(n2)">
+                <h2 class="valor">Disponibilidade</h2>
+                <p class="descrição"> Estar aberto para colaborar e dividir responsabilidades.</p>
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                </div>
+            </div>
+
+            <div class="texto"  id="n3" onclick="selecionado(n3)">
+                <h2 class="valor">Disponibilidade</h2>
+                <p class="descrição">  Aceitar mais demandas do que consegue suportar</p>
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto certo"  id="n4" onclick="selecionado(n4)">
+                <h2 class="valor">Disponibilidade</h2>
+                <p class="descrição">Trabalhar com o que gosta</p>
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto certo"  id="n5" onclick="selecionado(n5)">
+                <h2 class="valor">Disponibilidade</h2>
+                <p class="descrição">Saber lidar com imprevistos</p>
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+        </div>
+        <div id="tudo">
+            <div class="texto"  id="n6" onclick="selecionado(n6)">
+                <h2 class="valor">Disponibilidade</h2>
+                <p class="descrição"> Não informar sua disponibilidade ou limites pode causar confusão e frustrações.</p>
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto certo"  id="n7" onclick="selecionado(n7)">
+                <h2 class="valor">Disponibilidade</h2>
+                <p class="descrição">  Estar bem com as suas próprias escolhas</p>
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto"  id="n8" onclick="selecionado(n8)">
+                <h2 class="valor">Disponibilidade</h2>
+                <p class="descrição">  Nunca ter um espaço na agenda</p>
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                                </div>
+                
+            </div>
+
+            <div class="texto certo"  id="n9" onclick="selecionado(n9)">
+                <h2 class="valor">Disponibilidade</h2>
+                <p class="descrição"> Focar no essencial para estar disponível para assuntos prioritários.</p>
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                </div>
+                
+            </div>
+   
+            <div class="texto"  id="n10" onclick="selecionado(n10)">
+                <h2 class="valor">Disponibilidade</h2>
+                <p class="descrição"> Apresentar apatia ou falta de interesse nas tarefas propostas ou novos
+                    desafios</p>
+                <div class="divImg">
+                    <img src="/imagens/disponipilidade.png" alt="" class="img">
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+    <br>
+    <div class="Jogar">
+        <div ><a href="Fraqueza.html">Enviar
+        </a></div>
+    </div>
+    <script src="/js/valor.js">
+    </script>
+     <script>
+        var tempo = 0;
+        var working = false;
+        var intervaloId = 0;
+
+        function exibeTempo() {
+            var min = parseInt(tempo / 60);
+            var seg = tempo % 60;
+            let smin = min.toString().padStart(2, '0');
+            let sseg = seg.toString().padStart(2, '0');
+            let tempoTela = smin + ':' + sseg;
+            document.querySelector(".cronometro").value = tempoTela;
+
+            tempo--;
+
+            if (tempo < 0) {
+                working = false;
+                clearInterval(intervaloId);
+            }
+        }
+
+        function temporizador(t) {
+            if (!working) {
+                working = true;
+                tempo = t;
+                exibeTempo();
+                intervaloId = setInterval(exibeTempo, 1000);
+            }
+        }
+
+        // Recupera o valor do localStorage
+        const dados = JSON.parse(localStorage.getItem("dados"));
+        if (dados && dados.tempoRestante) {
+            temporizador(dados.tempoRestante); // Continua do ponto onde parou
+        } else {
+            console.error("Nenhum tempo encontrado no localStorage.");
+        }
+        function irParaProximaPagina() {
+            clearInterval(intervaloId); // Para o cronômetro para evitar conflitos
+            window.location.href = "Diciplina.html"; // Redireciona para a página 2
+        }
+    </script>
+</body>
+</html>

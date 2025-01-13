@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Desing.css">
+</head>
+<body>
+    <header>
+        <div id="cro">
+            <input type="text" class="cronometro" value="00:00"  readonly>
+        </div> 
+        <h2>Quais caracteristicas ajudam o valor Disciplina ?</h2>
+        <div class="livro"> 
+            <button id="descricao"><img class="aaaimg" src="/imagens//livro-fechado.png" alt=""></button>
+
+        </div>
+    </header>
+    <dialog class="dia" >
+        <div class="titulo">
+            <h1>Disciplina</h1>
+            <button>&times;</button>
+        </div>
+        <div class="textodia">
+            <div class="descricao"> <p>Cumpre o combinado, é pontual com horário e seus compromissos. Executa suas tarefas de forma disciplinada. É focado, pragmático, otimiza o tempo, atividades e recursos. Entrega resultados, não cria justificativas e desculpas.
+                Características que ajudam</p></div>
+           <div class="trite">
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">
+                </div>
+           </div>
+            
+        </div>
+    </dialog>
+    <BR></BR>
+    <div id = "tudo">
+            <div class="texto certo"  id="n1" onclick="selecionado(n1)">
+                <h2 class="valor">Disciplina</h2>
+                <p class="descrição"> Usar adequadamente os recursos e materiais disponibilizados</p>
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+
+            <div class="texto certo"  id="n2" onclick="selecionado(n2)">
+                <h2 class="valor">Disciplina</h2>
+                <p class="descrição">Separar relações de equipe de trabalho das relações pessoais, sabendo se relacionar com todos</p>
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">
+                </div>
+            </div>
+
+            <div class="texto"  id="n3" onclick="selecionado(n3)">
+                <h2 class="valor">Disciplina</h2>
+                <p class="descrição"> Apresentar desorganização pessoal e com o ambiente</p>
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto certo"  id="n4" onclick="selecionado(n4)">
+                <h2 class="valor">Disciplina</h2>
+                <p class="descrição"> Ser dedicado, empenhado, assíduo, persistente e resiliente</p>
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto"  id="n5" onclick="selecionado(n5)">
+                <h2 class="valor">Disciplina</h2>
+                <p class="descrição"> Delegar a responsabilidade de suas tarefas para os outros</p>
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+        </div>
+        <div id="tudo">
+            <div class="texto certo"  id="n6" onclick="selecionado(n6)">
+                <h2 class="valor">Disciplina</h2>
+                <p class="descrição"> Respeitar valores éticos e morais.</p>
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto"  id="n7" onclick="selecionado(n7)">
+                <h2 class="valor">Disciplina</h2>
+                <p class="descrição">  Permitir que sua vida pessoal prejudique seu trabalho</p>
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">
+                  </div>
+                
+            </div>
+
+            <div class="texto"  id="n8" onclick="selecionado(n8)">
+                <h2 class="valor">Disciplina</h2>
+                <p class="descrição"> Apresentar descuido com sua saúde física e mental</p>
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">     
+               </div>
+                
+            </div>
+
+            <div class="texto"  id="n9" onclick="selecionado(n9)">
+                <h2 class="valor">Disciplina</h2>
+                <p class="descrição"> Não ter foco</p>
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">
+                </div>
+                
+            </div>
+   
+            <div class="texto certo"  id="n10" onclick="selecionado(n10)">
+                <h2 class="valor">Disciplina</h2>
+                <p class="descrição"> Ter senso de urgência e agilidade para executar o que deve ser feito.</p>
+                <div class="divImg">
+                    <img src="/imagens/dicdiplina.png" alt="" class="img">
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+    <br>
+    <div class="Jogar">
+        <div ><a href="Disponibilidade.html">Enviar</a></div>
+    </div>
+    <script src="/js/valor.js">
+    </script>
+    <script>
+        var tempo = 0;
+        var working = false;
+        var intervaloId = 0;
+
+        function exibeTempo() {
+            var min = parseInt(tempo / 60);
+            var seg = tempo % 60;
+            let smin = min.toString().padStart(2, '0');
+            let sseg = seg.toString().padStart(2, '0');
+            let tempoTela = smin + ':' + sseg;
+            document.querySelector(".cronometro").value = tempoTela;
+
+            tempo--;
+
+            if (tempo < 0) {
+                working = false;
+                clearInterval(intervaloId);
+            }
+        }
+
+        function temporizador(t) {
+            if (!working) {
+                working = true;
+                tempo = t;
+                exibeTempo();
+                intervaloId = setInterval(exibeTempo, 1000);
+            }
+        }
+
+        // Recupera o valor do localStorage
+        const dados = JSON.parse(localStorage.getItem("dados"));
+        if (dados && dados.tempoRestante) {
+            temporizador(dados.tempoRestante); // Continua do ponto onde parou
+        } else {
+            console.error("Nenhum tempo encontrado no localStorage.");
+        }
+        function irParaProximaPagina() {
+            clearInterval(intervaloId); // Para o cronômetro para evitar conflitos
+            window.location.href = "Disponibilidade.html"; // Redireciona para a página 2
+        }
+    </script>
+</body>
+</html>

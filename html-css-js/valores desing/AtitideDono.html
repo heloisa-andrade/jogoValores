@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Desing.css">
+</head>
+<body>
+    <header> 
+        <div id="cro">
+            <input type="text" class="cronometro" value="00:00"  readonly>
+        </div>
+        <h2>Quais caracteristicas ajudam o valor Atitude de Dono ?</h2>
+        <div class="livro">
+            <button id="descricao"><img class="aaaimg" src="/imagens//livro-fechado.png" alt=""></button>
+        </div>
+       
+    </header>
+    <dialog class="dia" >
+        <div class="titulo">
+            <h1>Atitude de dono</h1>
+            <button>&times;</button>
+        </div>
+        <div class="textodia">
+            <div class="descricao"> <p>Comprometido com o resultado, sabe o que faz , tem visão do todo, não fica quito e nem se omite quanto vê ao que pode ser melhorado.  Conduz com disciplinado e foco no detalhe. É mão na massa, busca sempre ser o melhor naquilo que faz e não desiste nunca.</p></div>
+
+                <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>            
+        </div>
+    </dialog>
+    <BR></BR>
+    <div id = "tudo">
+            <div class="texto certo" id="n1" onclick="selecionado(n1)">
+                <h2 class="valor">Atitude de Dono</h2>
+                <p class="descrição"> Ser comprometido com os resultados com o trabalho , sempre buscando se superar  e ser o melhor naquilo que faz</p>
+                 <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>
+            </div>
+
+            <div class="texto certo" id="n2" onclick="selecionado(n2)">
+                <h2 class="valor">Atitude de Dono</h2>
+                <p class="descrição"> Ter senso de urgência e agilidade para executar o que deve ser feito</p>
+                <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>
+            </div>
+
+            <div class="texto certo" id="n3" onclick="selecionado(n3)">
+                <h2 class="valor">Atitude de Dono</h2>
+                <p class="descrição">  Ter proatividade, priorizando o bem comum</p>
+                <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto " id="n4" onclick="selecionado(n4)">
+                <h2 class="valor">Atitude de Dono</h2>
+                <p class="descrição"> Contribuir e dar sugestões, quando vê algo que não funciona bem ou que possa ser melhorado, superando as adversidades do dia a dia</p>
+                <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto certo" id="n5" onclick="selecionado(n5)">
+                <h2 class="valor">Atitude de Dono</h2>
+                <p class="descrição"> Tem paixão pelo que faz</p>
+                <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+        </div>
+        <div id="tudo">
+            <div class="texto" id="n6" onclick="selecionado(n6)">
+                <h2 class="valor">Atitude de Dono</h2>
+                <p class="descrição"> Apresentar autoridade em excesso e pouca mão na massa.</p>
+                <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto" id="n7" onclick="selecionado(n7)">
+                <h2 class="valor">Atitude de Dono</h2>
+                <p class="descrição">  Ignorar seus erros e omitir-se diante das atividades e responsabilidades</p>
+                <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto certo" id="n8" onclick="selecionado(n8)">
+                <h2 class="valor">Atitude de Dono</h2>
+                <p class="descrição">  Ser o exemplo, atuando sempre de forma ética</p>
+                <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto" id="n9" onclick="selecionado(n9)">
+                <h2 class="valor">Atitude de Dono</h2>
+                <p class="descrição"> Contentar-se apenas com o básico e necessário, não apresentando o interesse em evoluir</p>
+                <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>
+                
+            </div>
+   
+            <div class="texto" id="n10" onclick="selecionado(n10)">
+                <h2 class="valor">Atitude de Dono</h2>
+                <p class="descrição"> Ignorar seus erros e omitir-se diante das atividades e responsabilidades</p>
+                <div class="divImg">
+                    <img src="/imagens/atitude de dono.png" alt="" class="img">
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+    <br>
+    <div class="Jogar">
+        <div ><a href="Derteminação.html">Enviar</a></div>
+    </div>
+    <script src="/js/valor.js">
+    </script>
+    <script>
+         
+         var tempo = 0;
+        var working = false;
+        var intervaloId = 0;
+        var t = 600;
+        temporizador(t)
+        function exibeTempo() {
+            var min = parseInt(tempo / 60);
+            var seg = tempo % 60;
+            let smin = min.toString().padStart(2, '0');
+            let sseg = seg.toString().padStart(2, '0');
+            let tempoTela = smin + ':' + sseg;
+            document.querySelector(".cronometro").value = tempoTela;
+
+            // Salva o tempo restante no localStorage
+            localStorage.setItem("dados", JSON.stringify({ tempoRestante: tempo }));
+
+            tempo--;
+
+            if (tempo < 0) {
+                working = false;
+                clearInterval(intervaloId);
+            }
+        }
+
+        function temporizador(t) {
+            if (!working) {
+                working = true;
+                tempo = t;
+                exibeTempo();
+                intervaloId = setInterval(exibeTempo, 1000);
+            }
+        }
+
+        function irParaProximaPagina() {
+            clearInterval(intervaloId); // Para o cronômetro para evitar conflitos
+            window.location.href = "Derteminação.html"; // Redireciona para a página 2
+        }
+    </script>
+</body>
+</html>

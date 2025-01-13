@@ -1,0 +1,160 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body{
+    background-color: #11C76F;
+}
+
+header{
+    display: flex;
+    background-color: rgb(253, 253, 249);
+    height: 60px;
+    align-items: center ;
+    justify-content: space-between;
+    /* border-radius: 15%; */
+    h2{
+        margin-left: 7%;
+
+    }
+}
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+.card{
+    background-color: aliceblue;
+    width: 
+    100%;
+    border-radius: 20px;
+}
+.texto{
+    display: flex;
+    justify-content:space-around ;
+    flex-direction: column;
+    
+    margin: 0.5%;
+    background-color: rgb(255, 253, 253);
+
+    /* background-color: rgb(22, 56, 102); */
+    border-radius: 15px;
+    width: 50%;
+    border: white 15px solid;
+}
+.divImg{
+    display: flex;
+    justify-content: end;
+     
+}
+.img{
+    justify-self: end;
+    width: 25%;
+ } 
+#tudo{
+    display: flex;
+
+}
+.Jogar{
+    padding: 0.8%;
+    width: 10%;
+    display: flex;
+    justify-self: center;
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    color: black;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+a{
+    text-decoration: none;
+}
+
+dialog::backdrop{
+    background-color:rgba(0, 0, 0, 0.3); /*parte de tras do popup */
+}
+.pop{
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+    align-items: baseline;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 1em rgb(0 0 0/ .3);
+    margin-left: 100px;
+    height: 300px;
+    width: 80%;
+    p{
+        margin-left: 2%;
+    }
+}
+.dia{
+    margin-top: 10%;
+    margin-left: 25%;
+    width: 50%;
+    /* margin: 15%; */
+}
+.textodia{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+    .divImg{
+        display: flex;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        margin: 2%;
+        img{
+            width: 50%;
+            height: 75%;
+        }
+
+    }
+    
+}
+.titulo{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    align-items: center;
+
+}
+.titulo button{
+   margin-right: 2%;
+    width: 5%;
+    font-size: 1.25rem;
+    height: 5%;
+}
+
+.descricao{
+    text-align: left;
+    width: 70%;
+    border: none;
+}
+.livro{
+    margin-right : 2%;
+}
+.aaaimg{
+    width:25px;
+}
+/* .certo{
+    box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.5);
+} */
+ .trite{
+    .divImg{
+        width: 172px;
+        img{
+            height: 260px ;
+        }
+    }
+ }
+ .cronometro{
+    text-align: center;
+    border-radius: 5px;
+    height: 30px;
+}

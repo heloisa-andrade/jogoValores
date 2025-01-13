@@ -1,0 +1,72 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: #11C76F;
+}
+
+header{
+    display: flex;
+    background-color: rgb(253, 253, 249);
+    height: 40px;
+    align-items: center ;
+    justify-content: end;
+    /* border-radius: 15%; */
+    p{
+        margin: 3%;
+
+    }
+}
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+}
+.card{
+    background-color: aliceblue;
+    width: 
+    100%;
+    border-radius: 20px;
+}
+.texto{
+    display: flex;
+    justify-content:space-around ;
+    flex-direction: column;
+
+    margin: 0.5%;
+    background-color: rgb(255, 253, 253);
+
+    /* background-color: rgb(22, 56, 102); */
+    border-radius: 15px;
+    width: 50%;
+    border: white 15px solid;
+}
+.divImg{
+    display: flex;
+    justify-content: end;  
+}
+.img{
+   justify-self: end;
+   width: 35%;
+}
+#tudo{
+    display: flex;
+
+}
+.Jogar{
+    padding: 0.8%;
+    width: 10%;
+    display: flex;
+    justify-self: center;
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    color: black;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+a{
+    text-decoration: none;
+}

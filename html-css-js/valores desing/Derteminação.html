@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Desing.css">
+</head>
+<body>
+    <header> 
+        <div id="cro">
+            <input type="text" class="cronometro" value="00:00"  readonly>
+        </div>
+        <h2>Quais caracteristicas ajudam o valor Derteminação ?</h2>
+        <div class="livro">
+        </div>
+        <button id="descricao"><img class="aaaimg" src="/imagens//livro-fechado.png" alt=""></button>
+    </header>
+    <dialog class="dia" >
+        <div class="titulo">
+            <h1>Derteminação</h1>
+            <button>&times;</button>
+        </div>
+        <div class="textodia">
+            <div class="descricao"> <p>É obstinado, entrega resultados superiores e cumpre seus compromissos. Faz as coisas acontecerem, busca alternativas para os problemas e engaja as pessoas em prol de um objetivo comum.
+                Tem senso de urgência, atitude de dono e não desiste nunca.</p></div>
+           <div class="trite">
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+           </div>
+            
+        </div>
+    </dialog>
+        <BR></BR>
+    <div id = "tudo">
+            <div class="texto"  id="n1" onclick="selecionado(n1)">
+                <h2 class="valor">Derteminação</h2>
+                <p class="descrição"> Ter fé cega na busca do resultado, sem se preocupar com o todo e em entender ou  conhecer o objetivo da tarefa </p>
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+
+            <div class="texto"  id="n2" onclick="selecionado(n2)">
+                <h2 class="valor">Derteminação</h2>
+                <p class="descrição"> Ser muito dependente dos outros para conquistar o seu sucesso</p>
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+            </div>
+
+            <div class="texto certo"  id="n3" onclick="selecionado(n3)">
+                <h2 class="valor">Derteminação</h2>
+                <p class="descrição">  Colocar os seus alvos, os seus objetivos e as suas metas como uma certeza que será alcançada, e a partir deste ponto ser flexível e estar disposto a negociar as condições necessárias para alcançá-los</p>
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto certo"  id="n4" onclick="selecionado(n4)">
+                <h2 class="valor">Derteminação</h2>
+                <p class="descrição"> Ter iniciativa, senso de urgência e saber priorizar</p>
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto certo"  id="n5" onclick="selecionado(n5)">
+                <h2 class="valor">Derteminação</h2>
+                <p class="descrição"> Aceitar desafios com alta energia, assumindo responsabilidades e buscando sempre alternativas para alcançar a excelência</p>
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+        </div>
+        <div id="tudo">
+            <div class="texto certo"  id="n6" onclick="selecionado(n6)">
+                <h2 class="valor">Derteminação</h2>
+                <p class="descrição">Reconhecer a importância de cada conquista como agente motivador</p>
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto"  id="n7" onclick="selecionado(n7)">
+                <h2 class="valor">Derteminação</h2>
+                <p class="descrição"> Ser acomodado e não se importar em vencer as barreiras que se apresentam, desistindo ou  realizando as atividades apenas por obrigação</p>
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto"  id="n8" onclick="selecionado(n8)">
+                <h2 class="valor">Derteminação</h2>
+                <p class="descrição"> Duvidar de si mesmo</p>
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+                
+            </div>
+
+            <div class="texto certo"  id="n9" onclick="selecionado(n9)">
+                <h2 class="valor">Derteminação</h2>
+                <p class="descrição"> Entregar resultados que vão além do esperado, superando expectativas - diferente da Disciplina, diz respeito à qualidade e não ao simples cumprimento dentro do prazo</p>
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+                
+            </div>
+   
+            <div class="texto"  id="n10" onclick="selecionado(n10)">
+                <h2 class="valor">Derteminação
+                </h2>
+                <p class="descrição"> Diante da dificuldade, desistir do seu objetivo ao invés de buscar a solução</p>
+                <div class="divImg">
+                    <img src="/imagens/determinacao.png" alt="" class="img">
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+    <br>
+    <div class="Jogar">
+        <div ><a href="Diciplina.html">Enviar</a></div>
+    </div>
+    <script src="/js/valor.js">
+    </script>
+    <script>
+        var tempo = 0;
+        var working = false;
+        var intervaloId = 0;
+
+        function exibeTempo() {
+            var min = parseInt(tempo / 60);
+            var seg = tempo % 60;
+            let smin = min.toString().padStart(2, '0');
+            let sseg = seg.toString().padStart(2, '0');
+            let tempoTela = smin + ':' + sseg;
+            document.querySelector(".cronometro").value = tempoTela;
+
+            tempo--;
+
+            if (tempo < 0) {
+                working = false;
+                clearInterval(intervaloId);
+            }
+        }
+
+        function temporizador(t) {
+            if (!working) {
+                working = true;
+                tempo = t;
+                exibeTempo();
+                intervaloId = setInterval(exibeTempo, 1000);
+            }
+        }
+
+        // Recupera o valor do localStorage
+        const dados = JSON.parse(localStorage.getItem("dados"));
+        if (dados && dados.tempoRestante) {
+            temporizador(dados.tempoRestante); // Continua do ponto onde parou
+        } else {
+            console.error("Nenhum tempo encontrado no localStorage.");
+        }
+        function irParaProximaPagina() {
+            clearInterval(intervaloId); // Para o cronômetro para evitar conflitos
+            window.location.href = "Diciplina.html"; // Redireciona para a página 2
+        }
+    </script>
+</body>
+</html>
