@@ -135,47 +135,7 @@
     </div>
     <script src="/js/valor.js">
     </script>
-    <script>
-        var tempo = 0;
-        var working = false;
-        var intervaloId = 0;
+        <script src="/js/cronometro.js"></script>
 
-        function exibeTempo() {
-            var min = parseInt(tempo / 60);
-            var seg = tempo % 60;
-            let smin = min.toString().padStart(2, '0');
-            let sseg = seg.toString().padStart(2, '0');
-            let tempoTela = smin + ':' + sseg;
-            document.querySelector(".cronometro").value = tempoTela;
-
-            tempo--;
-
-            if (tempo < 0) {
-                working = false;
-                clearInterval(intervaloId);
-            }
-        }
-
-        function temporizador(t) {
-            if (!working) {
-                working = true;
-                tempo = t;
-                exibeTempo();
-                intervaloId = setInterval(exibeTempo, 1000);
-            }
-        }
-
-        // Recupera o valor do localStorage
-        const dados = JSON.parse(localStorage.getItem("dados"));
-        if (dados && dados.tempoRestante) {
-            temporizador(dados.tempoRestante); // Continua do ponto onde parou
-        } else {
-            console.error("Nenhum tempo encontrado no localStorage.");
-        }
-        function irParaProximaPagina() {
-            clearInterval(intervaloId); // Para o cronômetro para evitar conflitos
-            window.location.href = "Disponibilidade.html"; // Redireciona para a página 2
-        }
-    </script>
 </body>
 </html>

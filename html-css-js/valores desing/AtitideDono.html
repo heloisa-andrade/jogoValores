@@ -130,45 +130,6 @@
     </div>
     <script src="/js/valor.js">
     </script>
-    <script>
-         
-         var tempo = 0;
-        var working = false;
-        var intervaloId = 0;
-        var t = 600;
-        temporizador(t)
-        function exibeTempo() {
-            var min = parseInt(tempo / 60);
-            var seg = tempo % 60;
-            let smin = min.toString().padStart(2, '0');
-            let sseg = seg.toString().padStart(2, '0');
-            let tempoTela = smin + ':' + sseg;
-            document.querySelector(".cronometro").value = tempoTela;
-
-            // Salva o tempo restante no localStorage
-            localStorage.setItem("dados", JSON.stringify({ tempoRestante: tempo }));
-
-            tempo--;
-
-            if (tempo < 0) {
-                working = false;
-                clearInterval(intervaloId);
-            }
-        }
-
-        function temporizador(t) {
-            if (!working) {
-                working = true;
-                tempo = t;
-                exibeTempo();
-                intervaloId = setInterval(exibeTempo, 1000);
-            }
-        }
-
-        function irParaProximaPagina() {
-            clearInterval(intervaloId); // Para o cronômetro para evitar conflitos
-            window.location.href = "Derteminação.html"; // Redireciona para a página 2
-        }
-    </script>
+    <script src="/js/cronometro.js"></script>
 </body>
 </html>
