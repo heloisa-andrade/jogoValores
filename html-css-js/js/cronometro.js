@@ -52,11 +52,13 @@ function continuarCronometro() {
         iniciarCronometro(600); // Valor inicial padrão (60 segundos)
     }
 }
+function reniciar(teste){
+    sessionStorage.clear();
 
+}
 
 
 // Inicializar cronômetro ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     continuarCronometro();
-    configurarBotoesNavegacao();
 });
