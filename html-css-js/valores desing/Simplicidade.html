@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Desing.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 <body>
     <header>
@@ -131,8 +132,17 @@
        
     </div>
     <br>
-    <div class="Jogar">
-        <div ><a href="/Fedback.html">Enviar</a></div>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div id="res"></div>
+            <h2>Nessa rodada você conseguiu 2/10</h2>
+            <p>Um exemplo de como o valor se aplica no dia a dia:</p>
+            <p class="aplicacao">Quanto um colaborador consegue resolver os problemas de forma simples sem inventar mais burocracias.</p>
+            <p class="next"> <a href="/Fedback.html">Terminar</a></p>
+        </div>
+    </div>
+    <div class="Jogar" onclick="showModal()">
+        <div  >Enviar</div>
     </div>
     <script src="/js/valor.js">
     </script>
