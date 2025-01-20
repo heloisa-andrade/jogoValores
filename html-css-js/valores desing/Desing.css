@@ -158,3 +158,14 @@ dialog::backdrop{
     border-radius: 5px;
     height: 30px;
 }
+.validacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 500px;
+    height: 500px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+

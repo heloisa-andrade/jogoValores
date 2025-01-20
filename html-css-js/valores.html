@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jogo valores</title>
+    <link rel="stylesheet" href="valores desing/modal.css">
     <link rel="stylesheet" href="valores.css">
+
 </head>
 <body>
     <header> 
-        <p>Tutorial</p>
+        <button onclick="showModal()">Ranking</button>
+        <button onclick="showTutorial()">Tutorial</button>
         <p>J&F jogo de valores</p>
     </header>
     <div class="mensagem"> 
         <p id="frase"><strong> Bem vindo ao jogo de valores do grupo J&F! <br>Descubra mais sobre os valores da empresa</strong> </p>
-
         <br><br><br><br>
         <a href="regras.html "  >
             <div class="botoes">
@@ -22,5 +24,116 @@
         </a>
     </div>
     
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class=" close">
+                <h2>Ranking de jogadores</h2>
+                <span onclick="hideModal()">&times;</span>
+            </div>
+            <div class="tabela">
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Apelido</th>
+                        <th>Pontos</th>
+                        <th>tentativas</th>
+                        <th>tempo</th>
+                    </tr>
+                    <tr>
+                        <td>1°</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2°</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+            
+                    </tr>
+                    <tr>
+                        <td>3°</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+            
+                    </tr>
+                    <tr>
+                        <td>4°</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+            
+                    </tr>
+                    <tr>
+                        <td>5°</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+            
+                    </tr>
+                    <tr>
+                        <td>6°</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7°</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+            
+                    </tr>
+                    <tr>
+                        <td>8°</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+            
+                    </tr>
+                    <tr>
+                        <td>9°</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+            
+                    </tr>
+                    <tr>
+                        <td>10°</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+            
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+    </div> 
+    <div class="modal" id="modalT">
+        <div class="modal-content">
+            <div class=" close">
+                <h2>tutorial</h2>
+                <span onclick="hideTutorial()">&times;</span>
+            </div>
+            <video src="imagens/certo.mp4" class="video" controls ></video>
+            
+
+        </div>
+    </div>
+
+    <script src="js/modal.js"></script> 
 </body>
 </html> 

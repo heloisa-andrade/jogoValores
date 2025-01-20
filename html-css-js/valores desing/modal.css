@@ -17,6 +17,7 @@ body{
     visibility: hidden;
     transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out ;
 }
+
 .modal-content{
     background-color: aliceblue;
     padding: 16px 4px;
@@ -56,4 +57,10 @@ span:hover{
 .aplicacao{
     margin-top: -15px;
     
+}
+#res{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -25px;
 }
