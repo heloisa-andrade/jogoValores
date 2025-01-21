@@ -109,3 +109,10 @@ td{
     align-self: center;
     width: 500px;
 }
+.modal-content{
+    height: 500px;
+    width: 700px;
+}
+img{
+    width: 200px;
+}
