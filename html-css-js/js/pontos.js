@@ -1,24 +1,56 @@
-let pontos;
+//pontos
 let acerto;
-function validacion(){
-    var segundaClasse = document.querySelector('div[name="teste"]').classList[1];
-    if(segundaClasse = "certo"){
-        pontos +=2;
-        acerto ++;
-    }else{
-        pontos-=2;
+var pontuacao =2;
+let ahd =0 ;
+// função para adicionar pontos no sessionStroge
+function iniciarPontos(){
+    sessionStorage.setItem("pontos", pontuacao);
+}
+
+function pontos() {
+    var cards = document.querySelectorAll("div.texto");
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            if(card.classList.contains("selecionado")){
+                card.classList.remove("selecionado")
+                if(card.classList.contains("certo")){
+                    ahd = ahd-2;
+                    alert(ahd);
+                } else {
+                    ahd =ahd+2;
+                   alert(ahd);
+                }
+            }else{
+                card.classList.add("selecionado")
+                if(card.classList.contains("certo")){
+                    ahd =ahd+2;
+                    alert(ahd);
+                } else {
+                    ahd =ahd-2;
+                    alert(ahd);
+                }
+            }
+            pontuacao +=ahd;
+            sessionStorage.setItem("pontos", pontuacao);
+
+        });
+    });
+}
+
+function recuperaPontos(){
+    pontuacao = parseInt(sessionStorage.getItem("pontos"), 10)
+    if (!isNaN(pontuacao) && pontuacao > 0) {
+        iniciarCronometro(pontuacao);
+    }else {
+        iniciarPontos(); // Valor inicial padrão (60 segundos)
     }
 
-    sessionStorage.setItem("pontos", pontos);
-}
-function recuperaPontos(){
-    pontos += parseInt(sessionStorage.getItem("pontos"), 10)
-    validacion()
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     recuperaPontos();
+    pontos(); // Garante que os elementos estejam disponíveis antes de adicionar eventos
+   
 });
-
 
 
