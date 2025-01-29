@@ -32,10 +32,9 @@ header{
    
 }
 .formulario{
-    height: 30%;
-    width: 30%;
-    margin-top: 10%;
-    margin-left: 18%;
+    height: 70%;
+    /* margin-top: 10%;
+    margin-left: 18%; */
     padding: 15%;
 }
 .criarConta{
@@ -54,7 +53,18 @@ header{
     width: 75px;
     background-color: rgb(240, 240, 245);
     border:  solid black 1px;
+    color: black;
+    p{
+        color: black;
+    }
+    p:hover{
+        color: black;
+    }
+    p:active{
+        color: black;
+    }
 }
+
 /* #envia{
     height: 25px;
     width: 75px;

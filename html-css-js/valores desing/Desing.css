@@ -40,7 +40,6 @@ header{
     margin: 0.5%;
     background-color: rgb(255, 253, 253);
 
-    /* background-color: rgb(22, 56, 102); */
     border-radius: 15px;
     width: 50%;
     border: white 15px solid;
@@ -168,4 +167,6 @@ dialog::backdrop{
     padding-left: 20px;
 }
 
-
+.selecionado{
+    box-shadow: 0 0 0 5px rgba(0, 0, 255,0.5)
+}
