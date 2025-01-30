@@ -15,7 +15,7 @@
         <div class="pontuação">
             <h1>sua pontuação foi de :</h1>
             <div class="ponto">
-                <h1 id="teste">70</h1>
+                <h1 id="teste"></h1>
                 <h1>/70</h1>
             </div>
         </div>
@@ -31,13 +31,12 @@
         
 
     </div>
+    <script src="js/cronometro.js"></script>
+    <script src="js/pontos.js"></script>
+    <script src="js/pontos.js"></script>
     <script >
-        const h1 = document.getElementById('teste');
+        const texto = document.getElementById('teste');
         const res = document.getElementById('resposta');
-        
-        // Obtém o valor numérico do conteúdo do H1
-        const texto = Number(h1.innerText);
-
         // Verifica o valor e atualiza a resposta
         if (texto === 70) {
             res.innerText = `Parabéns! Você acertou todas. Você conhece muito bem os valores da empresa. Continue assim!`;
@@ -49,7 +48,5 @@
             res.innerText = `Você precisa melhorar bastante o seu conhecimento sobre os valores do grupo. Sua nota está abaixo de 50%.`;
         }
     </script>
-    <script src="js/cronometro.js"></script>
-    <script src="js/pontos.js"></script>
 </body>
 </html>

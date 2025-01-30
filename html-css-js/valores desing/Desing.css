@@ -170,3 +170,15 @@ dialog::backdrop{
 .selecionado{
     box-shadow: 0 0 0 5px rgba(0, 0, 255,0.5)
 }
+.pontos{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#imgRes{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 100px;
+    }
+}

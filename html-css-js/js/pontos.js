@@ -1,6 +1,6 @@
 // Pontos
 let pontuacao =0; // Pontuação inicial
-let joao;
+let joao =0 ;
 // Função para iniciar pontos no sessionStorage
 function iniciarPontos() {
     sessionStorage.setItem("pontos", pontuacao);
@@ -30,17 +30,15 @@ function pontos() {
                     joao -= 2; 
                 }
             }
-            sessionStorage.setItem("pontos", pontuacao); // Atualizar no sessionStorage
-            alert(`Pontuação atual: ${pontuacao}`);
+            sessionStorage.setItem("pontos", pontuacao);
+            console.log(joao) // Atualizar no sessionStorage
+            imagem();
+
         });
     });
 }
 
-// function valor(){
-//     let resposta = document.getElementById("res");
-//     resposta.innerHTML(`${pontuacao}/10`)
-// }
-// Função para recuperar pontos do sessionStorage
+
 function recuperaPontos() {
     let pontosSalvos = sessionStorage.getItem("pontos");
     if (pontosSalvos) {
@@ -49,12 +47,15 @@ function recuperaPontos() {
     } else {
         iniciarPontos(); // Inicializa com valor padrão
     }
-    pontos(); // Adiciona os eventos aos cartões
+    pontos(); 
 }
 
 // Evento para carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     recuperaPontos();
+    feedback();
+    imagem();
+    
 });
 
 function resultato(){
@@ -73,10 +74,7 @@ function hideModal(){
     var elemeny = document.getElementById("modal");
     elemeny.classList.remove("show-modal")
 }
-function imagem(){
-    var res = document.getElementById("res")
-    res.innerText = 'teste'
-}
+
 function showTutorial(){
     var elemeny = document.getElementById("modalT");
     elemeny.classList.add("show-modal")
@@ -86,6 +84,17 @@ function hideTutorial(){
     elemeny.classList.remove("show-modal")
 }
 function imagem(){
-    var res = document.getElementById("res")
-    res.innerText = 'teste'
+    let res = document.getElementById("res")
+    let img = document.getElementById("imgRes")
+    res.innerText = "Você conseguiu "+joao+"pontos"
+    if (joao > 5){
+        img.innerHTML = '<img src="/imagens/certo.png" alt="">'
+    }else{
+        img.innerHTML = '<img src="/imagens/errado.png" alt="">'
+    }
+}
+function feedback(){
+    let feedback = document.getElementById("teste")
+    feedback.innerText = pontuacao
+
 }
