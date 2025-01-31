@@ -21,7 +21,7 @@
         </div>
         <div id="resposta"></div>
         <div class="recomeco">
-            <button><a href="valores.html" onclick="reniciar(true)">Recomeçar</a></button>
+            <a href="valores.html" onclick="reniciar(true)"><button>Recomeçar</button></a>
         </div>
         <div class="compartilhar">
             <img src="imagens/icons8-whatsapp-48.png" alt="">
@@ -36,7 +36,6 @@
     <script src="js/pontos.js"></script>
     <script >
         const texto = document.getElementById('teste');
-        const res = document.getElementById('resposta');
         // Verifica o valor e atualiza a resposta
         if (texto === 70) {
             res.innerText = `Parabéns! Você acertou todas. Você conhece muito bem os valores da empresa. Continue assim!`;

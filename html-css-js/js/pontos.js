@@ -31,9 +31,7 @@ function pontos() {
                 }
             }
             sessionStorage.setItem("pontos", pontuacao);
-            console.log(joao) // Atualizar no sessionStorage
             imagem();
-
         });
     });
 }
@@ -86,7 +84,7 @@ function hideTutorial(){
 function imagem(){
     let res = document.getElementById("res")
     let img = document.getElementById("imgRes")
-    res.innerText = "Você conseguiu "+joao+"pontos"
+    res.innerText = "Você conseguiu "+joao+" pontos"
     if (joao > 5){
         img.innerHTML = '<img src="/imagens/certo.png" alt="">'
     }else{
@@ -96,5 +94,14 @@ function imagem(){
 function feedback(){
     let feedback = document.getElementById("teste")
     feedback.innerText = pontuacao
-
+    const res = document.getElementById('resposta');
+    if (pontuacao === 70) {
+        res.innerText = `Parabéns! Você acertou todas. Você conhece muito bem os valores da empresa. Continue assim!`;
+    } else if (pontuacao >= 52) {
+        res.innerText = `Parabéns! Você conseguiu uma ótima pontuação, mas ainda pode melhorar.`;
+    } else if (pontuacao >= 35 ) {
+        res.innerText = `Você precisa melhorar o seu conhecimento sobre os valores. Continue praticando para alcançar pelo menos 52 respostas corretas.`;
+    } else {
+        res.innerText = `Você precisa melhorar bastante o seu conhecimento sobre os valores do grupo. Sua nota está abaixo de 50%.`;
+    }
 }

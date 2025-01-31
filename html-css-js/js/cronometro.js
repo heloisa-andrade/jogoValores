@@ -49,7 +49,7 @@ function continuarCronometro() {
         window.location.href = "/Fedback.html";
         sessionStorage.clear()
     }else {
-        iniciarCronometro(6000); // Valor inicial padrão (60 segundos)
+        iniciarCronometro(600); // Valor inicial padrão (60 segundos)
     }
 }
 function reniciar(teste){
