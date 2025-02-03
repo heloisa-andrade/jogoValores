@@ -160,11 +160,9 @@ dialog::backdrop{
 .validacao{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     width: 500px;
     height: 500px;
-    padding-left: 20px;
 }
 
 .selecionado{
@@ -191,4 +189,12 @@ dialog::backdrop{
         height: 30px;
         width: 100px;
     }
+}
+
+.aplicacao{
+    margin: 20px;
+}
+#res{
+    
+    height: 50px;
 }
