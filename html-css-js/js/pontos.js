@@ -2,8 +2,15 @@
 let pontuacao =0; // Pontuação inicial
 let joao =0 ;
 // Função para iniciar pontos no sessionStorage
-function iniciarPontos() {
-    sessionStorage.setItem("pontos", pontuacao);
+function recuperaPontos() {
+    let pontosSalvos = sessionStorage.getItem("pontos");
+    if (pontosSalvos) {
+        pontuacao = Number(pontosSalvos);
+        if (isNaN(pontuacao)) pontuacao = 0; // Valor padrão se inválido
+    } else {
+        sessionStorage.setItem("pontos", pontuacao);// Inicializa com valor padrão
+    }
+    pontos(); 
 }
 
 // Função para adicionar pontos no sessionStorage
@@ -37,23 +44,13 @@ function pontos() {
 }
 
 
-function recuperaPontos() {
-    let pontosSalvos = sessionStorage.getItem("pontos");
-    if (pontosSalvos) {
-        pontuacao = Number(pontosSalvos);
-        if (isNaN(pontuacao)) pontuacao = 0; // Valor padrão se inválido
-    } else {
-        iniciarPontos(); // Inicializa com valor padrão
-    }
-    pontos(); 
-}
+
 
 // Evento para carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     recuperaPontos();
     feedback();
     imagem();
-    
 });
 
 function resultato(){
