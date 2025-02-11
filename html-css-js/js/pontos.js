@@ -1,6 +1,8 @@
 // Pontos
 let pontuacao =0; // Pontuação inicial
 let joao =0 ;
+let name;
+let email;
 // Função para iniciar pontos no sessionStorage
 function recuperaPontos() {
     let pontosSalvos = sessionStorage.getItem("pontos");
@@ -37,6 +39,7 @@ function pontos() {
                     joao -= 2; 
                 }
             }
+
             sessionStorage.setItem("pontos", pontuacao);
             imagem();
         });
@@ -89,6 +92,9 @@ function imagem(){
     }
 }
 function feedback(){
+     name = sessionStorage.getItem("nome").value
+    email = sessionStorage.getItem("email").value
+
     let feedback = document.getElementById("teste")
     feedback.innerText = pontuacao
     const res = document.getElementById('resposta');

@@ -30,6 +30,7 @@ async function getAllpost(){
         const body = document.createElement("p")
         const link = document.createElement("a")
 
+            // escreve o que nos items criado assima  como foi colocado no post
         title.innerText = post.title;
         body.innerText = post.body;
         link.innerText = "ler"
@@ -42,8 +43,6 @@ async function getAllpost(){
         postsContainer.appendChild(div)
 
     })
-
-
 }
 
 async function getPost(id) {
@@ -84,13 +83,13 @@ function createComent(comment){
     commentContainer.appendChild(div)
 }
 async function postComment(comment) {
-    const resposta = await fetch(`${url}/${postId}/comments`,{
+    const respose = await fetch(`${url}/${postId}/comments`,{
         method:"POST",
         body:comment,
-        headers:{ "content-type":"application/json"},
+        headers:{ "Content-type":"application/json"},
     })
-    const data = await resposta.json()
-    console.log(data)
+    const data = await respose.json()
+    createComent(data)
 }
 if (!postId){
     getAllpost()
@@ -103,6 +102,8 @@ if (!postId){
         email:emailInput.value,
         body :bodyInput.value
     }
-    comment = JSON.stringify
+
+    comment = JSON.stringify(comment)
+    postComment(comment)
    })
 }
