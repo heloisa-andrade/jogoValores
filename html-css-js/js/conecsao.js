@@ -2,12 +2,13 @@
 //login
 let nome;
 let eMail;
-
+let points;
 //conectanto com o back
-const url = "http://localhost:8080/"
+const commentFrom = document.querySelector("#comment-form")
 
 document.addEventListener("DOMContentLoaded", () => {
    recuperaLogin()
+   
 });
 
 function login(){
@@ -19,37 +20,45 @@ function login(){
 }
 
 function recuperaLogin(){
-    nome = sessionStorage.getItem("name");
-
-    if (!isNaN(nome) || nome.length == 0 || nome == null) {
-        eMail = sessionStorage.getItem("email")
+    let nome = sessionStorage.getItem("nome");
+    if (!nome || !isNaN(nome) || nome.length == 0) {
+        login();
     } else {
-        login() 
+        let eMail = sessionStorage.getItem("email");
+        let points = sessionStorage.getItem("pontos");
+
+        fetch('http://localhost:8080/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',  // Corrigido o content type
+            },
+            body: JSON.stringify({
+                name: nome,
+                email: eMail,
+                points: points
+            }),
+        })
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`Erro na requisição: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then((data) => console.log(data))
+        .catch((error) => console.error("Erro ao enviar requisição:", error));
     }
 }
-// async function getAllpost(){
-//     const resposta = await fetch(url)
-//     console.log(resposta)
 
-//     const data = await resposta.json();
-//     console.log(data)
 
-//     loadingElemnt.classList.add("hide")
 
-//     data.map((post) =>{
-//         const div = document.createElement("div")
-//         const title = document.createElement("h2")
-//         const body = document.createElement("p")
-//         const link = document.createElement("a")
-//         // escreve o que nos items criado assima  como foi colocado no post
-//         title.innerText = post.title;
-//         body.innerText = post.body;
-        
 
-//         div.appendChild(title)
-//         div.appendChild(body)
-
-//         postsContainer.appendChild(div)
+// async function postComment(comment) {
+//     const respose = await fetch(`${url}`,{
+//         method:"POST",
+//         body:comment,
+//         headers:{ "Content-type":"application/json"},
 //     })
+//     const data = await respose.json()
+//     console.log(respose)
 // }
-// getAllpost()
+
