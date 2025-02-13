@@ -3,6 +3,7 @@
 let nome;
 let eMail;
 let points;
+
 //conectanto com o back
 const commentFrom = document.querySelector("#comment-form")
 
@@ -24,9 +25,9 @@ function recuperaLogin(){
     if (!nome || !isNaN(nome) || nome.length == 0) {
         login();
     } else {
-        let eMail = sessionStorage.getItem("email");
-        let points = sessionStorage.getItem("pontos");
-
+        eMail = sessionStorage.getItem("email");
+        points = sessionStorage.getItem("pontos");
+        let tempoApi = sessionStorage.getItem("cronometroTempo")
         fetch('http://localhost:8080/add', {
             method: 'POST',
             headers: {
@@ -35,7 +36,8 @@ function recuperaLogin(){
             body: JSON.stringify({
                 name: nome,
                 email: eMail,
-                points: points
+                points: points,
+                 time:tempoApi
             }),
         })
         .then((res) => {
@@ -48,17 +50,4 @@ function recuperaLogin(){
         .catch((error) => console.error("Erro ao enviar requisição:", error));
     }
 }
-
-
-
-
-// async function postComment(comment) {
-//     const respose = await fetch(`${url}`,{
-//         method:"POST",
-//         body:comment,
-//         headers:{ "Content-type":"application/json"},
-//     })
-//     const data = await respose.json()
-//     console.log(respose)
-// }
 
