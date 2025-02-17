@@ -46,8 +46,7 @@ function recuperaLogin(){
             }
             return res.json();
         })
-        .then((data) => console.log(data))
-        .catch((error) => console.error("Erro ao enviar requisição:", error));
+        
     }
 }
 
