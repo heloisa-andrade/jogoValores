@@ -28,7 +28,7 @@ function recuperaLogin(){
         eMail = sessionStorage.getItem("email");
         points = sessionStorage.getItem("pontos");
         let tempoApi = sessionStorage.getItem("cronometroTempo")
-        fetch('http://localhost:8080/add', {
+        fetch('https://backvalores.onrender.com/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',  // Corrigido o content type
