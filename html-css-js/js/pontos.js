@@ -108,3 +108,14 @@ function feedback(){
         res.innerText = `Você precisa melhorar bastante o seu conhecimento sobre os valores do grupo. Sua nota está abaixo de 50%.`;
     }
 }
+function share(){
+	if (navigator.share !== undefined) {
+		navigator.share({
+			title: 'Jogo de valores',
+			text: `Olhá , eu consegui ${pontuacao} . Quantos você consegue? `,
+			url: 'https://jogovalores-1.onrender.com',
+		})
+		.then(() => console.log('Successful share'))
+		.catch((error) => console.log('Error sharing', error));
+	}
+}
