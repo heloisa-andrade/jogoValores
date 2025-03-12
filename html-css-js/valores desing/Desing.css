@@ -12,11 +12,11 @@ body{
 
 header{
     display: flex;
-    background-color: rgb(253, 253, 249);
-    height: 60px;
+    flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
     align-items: center ;
     justify-content: space-between;
-    /* border-radius: 15%; */
+    background-color: rgb(253, 253, 249);
+    height: 70px;
     h2{
         margin-left: 7%;
 
@@ -32,18 +32,7 @@ header{
     100%;
     border-radius: 20px;
 }
-.texto{
-    display: flex;
-    justify-content:space-around ;
-    flex-direction: column;
-    
-    margin: 0.5%;
-    background-color: rgb(255, 253, 253);
 
-    border-radius: 15px;
-    width: 50%;
-    border: white 15px solid;
-}
 .divImg{
     display: flex;
     justify-content: end;
@@ -55,7 +44,25 @@ header{
  } 
 #tudo{
     display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
+    justify-content: center; /* Centraliza os cards */
+    gap: 15px; /* Espaço entre os cards */
+    width: 90%;
+    margin: auto;
 
+
+}
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255, 253, 253);
+    border-radius: 15px;
+    height: auto; /* Ajusta a altura automaticamente */
+    width: 250px; /* Define uma largura padrão */
+    padding: 15px;
+    text-align: center;
+    border: white 5px solid;
 }
 .Jogar{
     padding: 0.8%;
@@ -140,10 +147,8 @@ dialog::backdrop{
 .aaaimg{
     width:25px;
 }
-/* .certo{
-    box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.5);
-} */
- .trite{
+
+.trite{
     .divImg{
         width: 172px;
         img{
@@ -197,3 +202,17 @@ dialog::backdrop{
     
     height: 50px;
 }
+@media (max-width: 768px) {
+    #tudo {
+        flex-direction: column; /* Empilha os cards em telas pequenas */
+        align-items: center; /* Centraliza os itens */
+    }
+    header{
+        height: auto;
+    }
+    .Jogar {
+        width: 20%; 
+        text-align: center;
+    }
+}
+

@@ -18,17 +18,21 @@ body{
     transition: visibility 0.25s ease-in-out, transform 0.25s ease-in-out, opacity 0.25s ease-in-out ;
 }
 
-.modal-content{
+.modal-content {
     background-color: aliceblue;
-    width: 600px;
+    width: 60%;
+    max-width: 600px;
     border-radius: 0.5rem;
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: left;
-
+    padding: 20px;
+    overflow-y: auto; 
 }
+
+
 span{
     float: right;
     width: 24px;
@@ -62,4 +66,16 @@ span:hover{
     justify-content: center;
     align-items: center;
     margin-top: -25px;
+}
+@media (max-width: 764px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+        max-height: 90vh; 
+    }
+    
+    .next {
+        width: 100%; 
+        text-align: center;
+    }
 }

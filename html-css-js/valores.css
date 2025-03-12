@@ -51,8 +51,8 @@ a{
 }
 .regra{
     display: flex ;
-    margin: 1.5%;
-    width: 200px;
+    margin-bottom: 15%;
+    width: 200%;
     height: 50px;
     background-color:aliceblue;
     align-items: center;
@@ -66,18 +66,6 @@ a{
     background-color: aliceblue;
     border-radius: 5%;
 }
-/* .Jogar{
-    padding: 0.8%;
-    width: 10%;
-    display: flex;
-    justify-self: center;
-    font-size: 100%;
-    display: flex;
-    justify-content: center;
-    color: black;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-} */
 table{
     border: 2px solid black;
     width: 150px;
@@ -105,14 +93,25 @@ td{
         margin-top: -5px;
     }
 }
-.video{
-    align-self: center;
-    width: 500px;
-}
 .modal-content{
     height: 500px;
     width: 700px;
 }
 img{
     width: 600px;
+}
+@media (max-width: 764px) {
+
+    .mensagem{
+        height: auto;
+        padding: 2%;
+    }
+    #frase{
+        
+        font-size: 30px;
+    }
+    .regra{
+        width: auto;
+    }
+    
 }

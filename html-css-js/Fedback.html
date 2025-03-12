@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="shortcut icon" href="imagens/picpay.jpg" type="image/x-icon">
-
     <link rel="stylesheet" href="fedback.css">
+    <style>
+        .hidde{
+            position: absolute;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            p{
+                width: 0;
+            }
+        }
+    </style>
+    
 </head>
 <body>
     <header> 
@@ -40,7 +51,10 @@
         
 
     </div>
-    
+        <div class="hidde">
+            <p id="imgRes" ></p>
+            <p id="res"></p>
+        </div>
     <!-- <div class="modal" id="modal"> -->
         <!-- <div class="modal-content">
             <div class=" close">

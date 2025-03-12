@@ -52,8 +52,9 @@ function pontos() {
 // Evento para carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     recuperaPontos();
-    feedback();
     imagem();
+    feedback();
+    
 });
 
 function resultato(){

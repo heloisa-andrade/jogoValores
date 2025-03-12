@@ -61,8 +61,8 @@ header{
     margin: 5%;
 }
 .recomeco{
-    margin-top: 30px;
-    margin-left: 220px;
+    margin-top: 5%;
+    margin-left: 40%;
     display: flex;
     align-self: center;
     align-items: center;
@@ -74,5 +74,18 @@ header{
         align-self: center;
         margin-left: 14px;
         text-decoration: none;
+    }
+}
+@media (max-width: 764px) {
+    .recomeco{
+        height: auto;
+        width: auto;
+    }
+    .mensagem{
+        height: auto;
+        padding: 2%;
+    }
+    header{
+        height: 100%;
     }
 }
